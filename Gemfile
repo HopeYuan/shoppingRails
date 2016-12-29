@@ -1,4 +1,5 @@
  source 'http://rubygems.org'
+ ruby '2.2.4'
 
     gem 'rails',        '5.0.0'
     gem 'puma',         '3.4.0'
@@ -11,8 +12,12 @@
 
     group :development, :test do
       gem 'sqlite3', '1.3.11'
+
       gem 'byebug',  '9.0.0', platform: :mri
     end
+
+
+ gem 'rails_12factor', group: :production
 
     group :development do
       gem 'web-console',           '3.1.1'
@@ -36,3 +41,10 @@
     gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
      gem 'bootstrap-sass',    '3.3.6' 
       gem 'bcrypt',    '3.1.11'
+      #postgres for production db
+ 
+
+
+
+
+gem 'stripe', :git =>'https://github.com/stripe/stripe-ruby'
