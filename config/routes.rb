@@ -15,4 +15,5 @@ Rails.application.routes.draw do
        resources :users
        resources :charges
         resources :purchases,only: [:show]
+         resources :products,only: [:index]
     end
