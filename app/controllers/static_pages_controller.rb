@@ -5,6 +5,6 @@ class StaticPagesController < ApplicationController
   def help
   end
   def about
-          flash[:notice] = "Testing the flash"
+          @product=Product.find_by_title("Shoes")
       end
 end
