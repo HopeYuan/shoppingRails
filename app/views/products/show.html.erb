@@ -1,6 +1,6 @@
- <% provide(:title, 'About Us') %>
-    <h1>About Us</h1>
-    <h1><%= @product.title%></h1>
+ <% provide(:title, 'You product') %>
+    <h2>You will pay <%= @product.title%> </h2>
+   
     <h2><%= @product.subtitle%></h2>
     <%= raw @product.description%>
   <%= form_tag charges_path,id:'chargeForm' do %>
