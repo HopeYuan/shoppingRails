@@ -1,7 +1,10 @@
  <% provide(:title, 'You product') %>
-    <h2>You will pay <%= @product.title%> </h2>
+    <h1>This is you receipt!</h1>
+    <h2>Produce name is <%= @product.title%> </h2>
    
-    <h2><%= @product.subtitle%></h2>
+    <h2>Produce details :<%= @product.subtitle%></h2> 
+    <h2><%= @product.description%></h2>
+
     <%= raw @product.description%>
   <%= form_tag charges_path,id:'chargeForm' do %>
 
@@ -35,7 +38,7 @@
   document.getElementById('btn-buy').addEventListener('click', function(e) {
   
   handler.open({
-    name: "Sandwich",
+    name: "YOU PAYMENT",
     description: "<%= @product.title%>($<%= @product.price%>)",
     amount: document.getElementById("amount").value
   });
