@@ -5,7 +5,7 @@
     <h2>Produce details :<%= @product.subtitle%></h2> 
     <h2><%= @product.description%></h2>
 
-    <%= raw @product.description%>
+    
   <%= form_tag charges_path,id:'chargeForm' do %>
 
     <% if flash[:error].present? %>
