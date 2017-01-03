@@ -8,7 +8,7 @@ class UsersController < ApplicationController
        def new
         @user = User.new
       end
-def create
+     def create
         secure_params = params.require(:user).permit(:name, :email, 
                                   :password, :password_confirmation)
         @user = User.new(secure_params)
