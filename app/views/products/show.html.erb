@@ -1,8 +1,11 @@
- <% provide(:title, 'About Us') %>
-    <h1>About Us</h1>
-    <h1><%= @product.title%></h1>
-    <h2><%= @product.subtitle%></h2>
-    <%= raw @product.description%>
+ <% provide(:title, 'You product') %>
+    <h1>This is you receipt!</h1>
+    <h2>Produce name is <%= @product.title%> </h2>
+   
+    <h2>Produce details :<%= @product.subtitle%></h2> 
+    <h2><%= @product.description%></h2>
+
+    
   <%= form_tag charges_path,id:'chargeForm' do %>
 
     <% if flash[:error].present? %>
@@ -20,11 +23,11 @@
    <%=hidden_field_tag 'stripeEmail'%>
    <%=hidden_field_tag 'product_id',@product.id%>
    <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block">
-   	<span class="glyphicon glyphicon-ok">Buy this!</span>
+    <span class="glyphicon glyphicon-ok">Buy this!</span>
    </button>
 
    <script>
-   	var handler = StripeCheckout.configure({
+    var handler = StripeCheckout.configure({
     key: '<%= Rails.configuration.stripe[:publishable_key] %>',
     token: function(token, arg) {
       document.getElementById("stripeToken").value = token.id;
@@ -35,7 +38,7 @@
   document.getElementById('btn-buy').addEventListener('click', function(e) {
   
   handler.open({
-    name: "Sandwich",
+    name: "YOU PAYMENT",
     description: "<%= @product.title%>($<%= @product.price%>)",
     amount: document.getElementById("amount").value
   });

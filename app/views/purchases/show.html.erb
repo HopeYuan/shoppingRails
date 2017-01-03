@@ -1,9 +1,9 @@
 <h1>This is your purchase</h1>
-<p><%= @product.title%></p>
-<p><%= @product.subtitle%></p>
-<p>$<%= @product.price%></p>
-<p><%= @product.description%></p>
-<p>Your purchase is <%= @purchase.inspect %></p>
-<p>Here is <a href=https://s3-us-west-2.amazonaws.com/rails-shoppingapp-bucket/hotpot.jpg>you file</p>
+<h3>Product title is :<%= @product.title%></h3>
+<h3>Product subtitle is :<%= @product.subtitle%></h3>
+<h3>Product price is :$<%= @product.price%></h3>
+<h3><%= @product.description%></h3>
+
+<h3>Here is <a href=https://s3-us-west-2.amazonaws.com/rails-shoppingapp-bucket/hotpot.jpg>you file</h3>
 
 <img src='https://s3-us-west-2.amazonaws.com/rails-shoppingapp-bucket/thanks.jpg'/>

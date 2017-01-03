@@ -4,7 +4,9 @@ class StaticPagesController < ApplicationController
 
   def help
   end
-  def about
-          @product=Product.find_by_title("Shoes")
-      end
+  def contact
+  end
+  
+      def admin
+      end 
 end

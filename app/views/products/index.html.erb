@@ -3,12 +3,13 @@
 <section id="products">
 
 	<%= @products.each do |product|%>
-	<div class="product prefix">
+	<div  class="product prefix">
 		<a href="<%= product_path(product)%>">
-		<img src="<%=asset_path product.image_name %>" alt="<%= product.title %>"/>
-		<span class="product-price">$<%= product.price %></span>
+		<img  class="productimg" src="<%=asset_path product.image_name %>" alt="<%= product.title %>"/>
+		
 	</div>
-    <p class="product-title"><%= product.title%></p>
+    <p  style="font-size: 30px; text-align:center " class="product-title">price :$<%= product.price%></p>
+    <p  style="font-size: 30px; text-align:center " class="product-title">name :<%= product.title%></p>
     </a>
 	
 	<% end %>

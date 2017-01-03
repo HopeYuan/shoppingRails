@@ -1,12 +1,23 @@
 <% provide(:title, 'Home') %>
     <div class="center jumbotron">
-      <h1>Welcome to the Sample App</h1>
+      <h1>Welcome to the shopping website!</h1>
 
-      <h2>
-        This is the home page for the
-        <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-        sample application.
-      </h2>
+     
+
+<section id="products">
+
+  <%= @products.each do |product|%>
+  <div class="product prefix">
+    <a href="<%= product_path(product)%>">
+    <img src="<%=asset_path product.image_name %>" alt="<%= product.title %>"/>
+    <span class="product-price">$<%= product.price %></span>
+  </div>
+    <p class="product-title"><%= product.title%></p>
+    </a>
+  
+  <% end %>
+
+</section>
 
       <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>   <!--  CHANGED LINE -->
     </div>      
